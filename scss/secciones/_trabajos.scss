@@ -169,6 +169,7 @@ main div img{
     .trabajos-padre{
         display: flex;
         flex-direction: column;
+        
     }
     footer{
         @include borrar;
