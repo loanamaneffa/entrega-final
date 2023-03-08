@@ -7,7 +7,11 @@
 /*estilos del main*/
 
 .trabajos{
-    text-align:center;
+    align-items: center;
+    
+    
+  
+    }
 
     .trabajos-titulo{
         color:$color-blanco;
@@ -16,27 +20,66 @@
         font-family: $letra;
         background-color:$color-negro;
         text-align: center;
+        grid-area: trabajos-titulo;
     }
 
         .trabajos-padre{
-            display:flex;
-            flex-wrap: wrap;
+            
             justify-items: center;
             justify-content: center;
-            gap: 30px;     
+            gap: 30px;  
+            text-align:center;
+            align-items: center;
+             width: 100%;
+             @include grid-3;
+             grid-template-areas: 
+            "trabajos-titulo trabajos-titulo trabajos-titulo trabajos-titulo trabajos-titulo"
+            "img-1 img-2 img-3 img-4 img-5"
+            "img-6 img-7 img-8 img-9 img-10"
+            ;
+            
+        
+                    .img-1{
+                        grid-area: img-1;
+                    }
+                    .img-2{
+                        grid-area: img-2;
+                    }
+                    .img-3{
+                        grid-area: img-3;
+                    }
+                    .img-4{
+                        grid-area: img-4;
+                    }
+                    .img-5{
+                        grid-area: img-5;
+                    }
+                    .img-6{
+                        grid-area: img-6;
+                    }
+                    .img-7{
+                        grid-area: img-7;
+                    }
+                    .img-8{
+                        grid-area: img-8;
+                    }
+                    .img-9{
+                        grid-area: img-9;
+                    }
+                    .img-10{
+                        grid-area: img-10;
+                    }   
         }
 
        
-}
+
 
 
 main div img{
-    width: 17%;
-    height:20%;
-    margin-right:10px;
-    margin-left: 10px;
-    margin-bottom: 90px;
+    width: 90%;
+    height:70%;
     transition: 2s, 1s;
+    margin: 50px 10px 10px 10px;
 
 }
 
@@ -69,10 +112,10 @@ main div img{
 /*vista para pantalla tablet*/
 
 
-@media screen and (max-width:600px){
-    main{
+@media screen and (max-width:900px){
+    .trabajos-padre{
         width: 100%;
-       @include grid-3;
+        @include grid-3;
         grid-template-areas: 
             "img-1 img-2"
             "img-3 img-4"

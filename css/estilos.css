@@ -117,13 +117,14 @@ footer {
   margin-top: 100px; }
 
 /*vista para pantalla tablet*/
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 900px) {
   .cuerpo-contenedor {
     display: flex;
     justify-content: center; }
     .cuerpo-contenedor .cuerpo-img {
-      align-items: center;
-      width: 100vh; }
+      width: 100%;
+      height: 40%;
+      margin-left: 50px; }
     .cuerpo-contenedor .cuerpo-texto {
       flex-direction: row;
       text-align: center;
@@ -161,28 +162,56 @@ footer .pie-descripcion {
 /* PAGINA 3 (TRABAJOS)*/
 /*estilos del main*/
 .trabajos {
-  text-align: center; }
-  .trabajos .trabajos-titulo {
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-    background-color: black;
-    text-align: center; }
-  .trabajos .trabajos-padre {
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: center;
-    justify-content: center;
-    gap: 30px; }
+  align-items: center; }
+
+.trabajos-titulo {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: black;
+  text-align: center;
+  grid-area: trabajos-titulo; }
+
+.trabajos-padre {
+  justify-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1r 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  justify-items: center;
+  grid-template-areas: "trabajos-titulo trabajos-titulo trabajos-titulo trabajos-titulo trabajos-titulo" "img-1 img-2 img-3 img-4 img-5" "img-6 img-7 img-8 img-9 img-10"; }
+  .trabajos-padre .img-1 {
+    grid-area: img-1; }
+  .trabajos-padre .img-2 {
+    grid-area: img-2; }
+  .trabajos-padre .img-3 {
+    grid-area: img-3; }
+  .trabajos-padre .img-4 {
+    grid-area: img-4; }
+  .trabajos-padre .img-5 {
+    grid-area: img-5; }
+  .trabajos-padre .img-6 {
+    grid-area: img-6; }
+  .trabajos-padre .img-7 {
+    grid-area: img-7; }
+  .trabajos-padre .img-8 {
+    grid-area: img-8; }
+  .trabajos-padre .img-9 {
+    grid-area: img-9; }
+  .trabajos-padre .img-10 {
+    grid-area: img-10; }
 
 main div img {
-  width: 17%;
-  height: 20%;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-bottom: 90px;
-  transition: 2s, 1s; }
+  width: 90%;
+  height: 70%;
+  transition: 2s, 1s;
+  margin: 50px 10px 10px 10px; }
 
 .img-1:hover {
   filter: drop-shadow(10px 10px 10px #0a0a0a); }
@@ -215,34 +244,34 @@ main div img {
   filter: drop-shadow(10px 10px 10px #0a0a0a); }
 
 /*vista para pantalla tablet*/
-@media screen and (max-width: 600px) {
-  main {
+@media screen and (max-width: 900px) {
+  .trabajos-padre {
     width: 100%;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1r 1fr 1fr 1fr;
     grid-template-rows: auto;
     justify-content: center;
     justify-items: center;
     grid-template-areas: "img-1 img-2" "img-3 img-4" "img-5 img-6" "img-7 img-8" "img-9 img-10"; }
-    main .img-1 {
+    .trabajos-padre .img-1 {
       grid-area: img-1; }
-    main .img-2 {
+    .trabajos-padre .img-2 {
       grid-area: img-2; }
-    main .img-3 {
+    .trabajos-padre .img-3 {
       grid-area: img-3; }
-    main .img-4 {
+    .trabajos-padre .img-4 {
       grid-area: img-4; }
-    main .img-5 {
+    .trabajos-padre .img-5 {
       grid-area: img-5; }
-    main .img-6 {
+    .trabajos-padre .img-6 {
       grid-area: img-6; }
-    main .img-7 {
+    .trabajos-padre .img-7 {
       grid-area: img-7; }
-    main .img-8 {
+    .trabajos-padre .img-8 {
       grid-area: img-8; }
-    main .img-9 {
+    .trabajos-padre .img-9 {
       grid-area: img-9; }
-    main .img-10 {
+    .trabajos-padre .img-10 {
       grid-area: img-10; } }
 
 /*pantalla celular*/
@@ -278,7 +307,7 @@ footer .pie-descripcion {
 .contenedor {
   text-align: center;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr 1r 1fr 1fr 1fr;
   grid-template-rows: auto;
   justify-content: center;
   justify-items: center;
@@ -348,7 +377,7 @@ footer .pie-descripcion {
 /*estilos del main*/
 .contacto {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr 1r 1fr 1fr 1fr;
   grid-template-rows: auto;
   justify-content: center;
   justify-items: center;
